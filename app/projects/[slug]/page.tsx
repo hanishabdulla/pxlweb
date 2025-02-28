@@ -1,10 +1,11 @@
-export const runtime = 'edge';
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { projects } from "@/lib/data"
 import { notFound } from "next/navigation"
+
+export const runtime = 'edge';
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug)
